@@ -3,7 +3,7 @@ import (
     "fmt"
 )
 
-func nReina(n int, filas int, columnas, tablero []string) {
+go func nReina(n int, filas int, columnas, tablero []string) {
     if filas == n {
         *respuestas = append(*respuestas, append([]string{}, tablero...))
         return
@@ -21,7 +21,7 @@ func nReina(n int, filas int, columnas, tablero []string) {
 
 }
 
-func resolverNReinas(n int) [][]string {
+go func resolverNReinas(n int) [][]string {
     columna := make([]bool, n)
     num1 := make([]bool, 2 * n)
     num2 := make([]bool, 2 * n)
